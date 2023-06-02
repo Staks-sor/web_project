@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Главная</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+ {% if message %}
+  <p><strong>{{ message }}</strong></p>
+ {% endif %}
+
+ <h1>Введите URL YOUTUBE</h1>
+ <form method="post">
+  {% csrf_token %}
+  <input type="text" name="url">
+  <input type="submit" value="Отправить">
+ </form>
+</body>
+</html>
